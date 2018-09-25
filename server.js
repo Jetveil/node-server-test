@@ -40,9 +40,17 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
-    pageTitle: 'About Page'
+    pageTitle: 'About Page',
+    aboutText: 'Wired test project v 1.0.0'
   });
 });
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'My Portfolio',
+    projectList: 'Here are my futher projects'
+  })
+})
 
 app.get('/bad', (req, res) => {
   res.send({
